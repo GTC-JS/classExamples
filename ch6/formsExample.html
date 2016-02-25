@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--<form style="border:1">-->
+<form action="action_page.php" method="GET">
+ <div>This form submits to  action_page.php page. The get method encodes data in URL like
+<i>action_page.php?firstname=Ozgur&amp;lastname=Ozturk</i>. This sequence of name value pairs is referred as <b>query string</b>. Post method sends it  </div> 
+ <br>
+  First name:<br>
+  <input type="text" name="firstname"
+  placeholder="First Name" required="false" autocomplete="off">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname"
+  required="true" placeholder="Last Name" >
+  <br>
+  
+  <input type="number" name="age"
+  required="true" placeholder="Age" >
+  <br>
+    E-mail:<br>
+  <input type="email"  name="email"
+  placeholder="email@email.com" >
+  <br>
+
+    Address:<br>
+  <input type="text" name="Address"
+  placeholder="Address" >
+  <br>
+<!--
+  try
+  size="2"
+  then
+ multiple="true"
+-->
+ <label for="stateSelect">State:</label>
+  <select multiple="true" name="State" id="stateSelect" >
+      <option label="Georgia" value="Georgia">Georgia</option>
+      <option value="Ohio">Ohio</option>
+      <option value="Maryland">Maryland</option>
+      <option value="Alabama">Alabama</option>
+<!--
+      try 
+      selected="true"
+-->
+      <option value="Florida" selected="true">Florida</option>
+      <option>N. Carolina</option>
+      <option value="S. Carolina">S. Carolina</option>
+      <option value="West Virginia">W. Virginia</option>
+      <option value="Other" label="Other States are not eligible to compete"/>
+    </select>  
+  <br>
+     Zip Code:<br>
+  <input type="text" name="ZipCode"
+  placeholder="Zip Code" >
+  <br>
+    
+    <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="range" min="10" step="10" max="110" onchange="document.getElementById('rangeValue').textContent='Value:' + this.value;">
+  <span id="rangeValue">Value:</span>
+  <br>
+<!--
+  try
+   formnovalidate="true"
+-->
+<input style="margin:5" type="submit" value="Submit">
+</form>
+
+<div>
+    <ul>
+        <li>
+            <p>Note that the form itself is not visible.</p>
+       </li>
+        <li><p>Also note that the default width of a text input field is 20 characters.</p>
+</li>
+    </ul>
+</div>
+    
+    <div>
+    <ul>
+	<li>GET requests can be cached</li>
+	<li>GET requests remain in the browser history</li>
+	<li>GET requests can be bookmarked</li>
+	<li>GET requests have length restrictions</li>
+	<li>GET requests should be used only to retrieve data</li>
+	<li>POST is a little safer than GET because the parameters are not stored in browser history or in web server logs
+</li>
+<li>Note that the query string (name/value pairs) is sent in the HTTP message body of a POST request:
+<div style="padding:15px;border: 1px solid blue;">
+POST /test/demo_form.asp HTTP/1.1
+<br>
+Host: w3schools.com
+<br>
+name1=value1&name2=value2
+        </div>
+</li>
+</ul>
+</div>
+</body>
+</html>

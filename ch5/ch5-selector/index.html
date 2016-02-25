@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week Table</title>
+</head>
+<body>
+    <table border="1">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><div>Test</div></td>
+            <td></td>
+            <td><div>Test</div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+        <div class="even">Test</div>
+        <div class="odd">Test1</div>
+        <div class="even">Test2</div>
+        <div class="odd">Test3</div>
+        <div class="even">Test4</div>
+
+        
+        <button onclick="colorDivsInDataCells();">Try querySelectorAll</button>
+        
+                <button onclick="colorEvens();">Try getElementsByClassName</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+        <script>
+            
+    (function () {
+        var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+       var i = 0;
+       while (i < 7) {
+          document.getElementsByTagName("th")[i].innerHTML = daysOfWeek[i];
+           document.getElementsByTagName("td")[i].innerHTML = "room " +(100 + i);
+          i++;
+       }
+    })()
+    
+    //IIFE (Immediately Invoked Function Expression) 
+    //same as declaring function and
+    //addColumnHeaders();
+    function colorDivsInDataCells(){
+        var divs = document.querySelectorAll("td>div");
+        for(var i = 0; i<divs.length ; i++){
+            divs[i].style.backgroundColor="red";    
+        }
+    }
+    
+    function colorEvens(){
+        document.getElementsByClassName("even").style.backgroundColor="yellow";
+        }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+//    function colorEvens(){
+//        _.map(document.getElementsByClassName("even"),
+//              function(element){
+//                element.style.backgroundColor="yellow";
+//        });
+//    }        
+    </script>
+</body>
+</html>
