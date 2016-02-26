@@ -16,3 +16,5 @@ person.address =
     "123 Broadway St, Atlanta, GA 30001";
 //or
 person["address"]
+
+Object.getOwnPropertyNames(person)

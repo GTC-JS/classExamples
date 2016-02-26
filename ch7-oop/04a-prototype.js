@@ -24,3 +24,12 @@ function listAllProperties(o){
 	return result; 
 }
 //This can be useful to reveal "hidden" properties (properties in the prototype chain which are not accessible through the object, because another property has the same name earlier in the prototype chain). Listing accessible properties only can easily be done by removing duplicates in the array.
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+
+// https://blog.pivotal.io/labs/labs/javascript-constructors-prototypes-and-the-new-keyword
+
+// http://thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters
