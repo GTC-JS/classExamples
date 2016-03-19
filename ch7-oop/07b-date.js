@@ -24,3 +24,5 @@ time2-time1 //milliseconds like 5809
 //TypeError: time2.getDay is not a function
 var time3 = new Date(time2)
 time3.getDay() //5
+time3.getYear() //116
+time3.getFullYear() //2016

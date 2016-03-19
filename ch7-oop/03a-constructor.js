@@ -4,7 +4,7 @@
 
 //This is a constructor function
 function Car() {}
-car1 = new Car();
+var car1 = new Car();
  
 console.log(car1.color);    // undefined
 
@@ -12,6 +12,10 @@ console.log(car1.color);    // undefined
 //If JS does not find it in object,
 //it searches up in prototype hierarchy
 Car.prototype.color = null; // default value
+Car.prototype.changeColor = function (newColor)
+{
+    Car.prototype.color= newColor;
+}
 console.log(car1.color);    // null, found default 
 
 car1.color = "black";
