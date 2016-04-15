@@ -1,28 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DOM Manipulation</title>
+  <meta charset="utf-8">
+  <title>event.target demo</title>
+  <style>
+  span, strong, p {
+    padding: 8px;
+    display: block;
+    border: 1px solid #999;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <button>Show Hide</button>
-    <div>
-        <p class="selected">a1</p>
-        <p>a2</p>
-        <p>a3</p>
-        <p>a4</p>
-    </div>
-    <div>
-        <p>b</p>
-    </div>
-    <script   src="jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
-    <script>
-        $( "div" ).hide();
-        // jQuery way to attach handler to events 
-        $("button").hover(showHide);
-        function showHide(){
-                $( "div" ).slideDown();
-        }        
-    </script>
+ 
+<div id="log"></div>
+<div>
+  <p>
+    <strong><span>click</span></strong>
+  </p>
+</div>
+ 
+<script>
+$( "body" ).click(function( event ) {
+  $( "#log" ).html( event.type + " on: " + event.target.nodeName+
+                  " current: " + event.currentTarget.nodeName);
+});
+</script>
+ 
 </body>
 </html>
