@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <button onclick="changeText();">Change Text</button>
+    <div>
+        <p class="selected">a1</p>
+        <p>a2</p>
+        <p>a3</p>
+        <p>a4</p>
+    </div>
+    <div>
+        <p>b</p>
+    </div>
+ 
+    <script   src="jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    <script>
+        function changeText(){
+            $( "div > p" ).text("same!");    
+        }        
+    </script>
+</body>
+</html>

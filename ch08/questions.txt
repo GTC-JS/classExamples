@@ -1,0 +1,282 @@
+string slice
+
+var myStr= "dasDA 122 adsad837192837"
+undefined
+myPat.exec(myStr)
+[""]
+WHY?
+
+var str1= "Ozgur Ozturk"
+undefined
+srt1.charAt(1)
+VM126:2 Uncaught ReferenceError: srt1 is not defined(…)(anonymous function) @ VM126:2InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+str1.charAt(1)
+"z"
+str1.charCodeAt(1)
+122
+str1.charCodeAt(21)
+NaN
+str1.charAt(21)
+""
+str1.indexOf("Oz")
+0
+str1.lastIndexOf("Oz")
+6
+var str1= "Ozgur Ozturk"
+undefined
+str1.match("Oz")
+["Oz"]
+str1.match("oz")
+null
+str1.search("Oz")
+0
+str1.search("z")
+1
+var str1= "Ozgur Ozturk"
+undefined
+str1.substring(0,1)
+"O"
+str1.substring(1)
+"zgur Ozturk"
+str1.substring(6, -3)
+"Ozgur "
+var str1= "Ozgur Ozturk"
+undefined
+var email = "president@whitehouse.gov";
+
+undefined
+var atPosition = email.search("@");
+undefined
+email.substring(0,atPosition)
+"president"
+var atIndex = email.indexOf("@", 10); 
+undefined
+var atIndex = email.indexOf("@", 10); 
+undefined
+atIndex
+-1
+email.search("@");
+9
+email.substring(0, nameEnd);
+VM248:2 Uncaught ReferenceError: nameEnd is not defined(…)(anonymous function) @ VM248:2InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+email.substring(0, nameEnd)
+VM253:2 Uncaught ReferenceError: nameEnd is not defined(…)(anonymous function) @ VM253:2InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+email.substring(0, 9)
+"president"
+email.lastIndexOf(".");
+20
+var startDomainID = email.lastIndexOf(".");
+
+undefined
+email.substring(startDomainID + 1);
+"gov"
+email.slice(-14,-4);
+"whitehouse"
+var email = "president@whitehouse.gov";
+
+undefined
+var urlProtocol = new RegExp("https");
+
+undefined
+typeof urlProtocol
+"object"
+var url = "http://www.cengagebrain.com";
+
+undefined
+var searchResult = url.search(urlProtocol); 
+
+undefined
+searchResult
+-1
+urlProtocol.test(url)
+false
+var emailPattern = /^[_a-zA-Z0-9\\-]+(\.[_a-zA-Z0-9\\-]+)*↵
+      @[a-zA-Z0-9\\-]+(\.[a-zA-Z0-9\\-]+)*(\.[a-z]{2,6})$/;
+
+VM370:2 Uncaught SyntaxError: Invalid regular expression: missing /(…)InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+var emailPattern = /^[_a-zA-Z0-9\\-]+(\.[_a-zA-Z0-9\\-]+)*@[a-zA-Z0-9\\-]+(\.[a-zA-Z0-9\\-]+)*(\.[a-z]{2,6})$/;
+
+undefined
+emailPattern
+/^[_a-zA-Z0-9\\-]+(\.[_a-zA-Z0-9\\-]+)*@[a-zA-Z0-9\\-]+(\.[a-zA-Z0-9\\-]+)*(\.[a-z]{2,6})$/
+var email = "president@whitehouse.gov";
+
+undefined
+emailPattern.test(email)
+true
+var email = "president@whitehouse.gov.";
+
+undefined
+emailPattern.test(email)
+false
+var email = "presidentATwhitehouse.gov";
+
+undefined
+emailPattern.test(email)
+false
+var email = "president@whitehouse.gov.";
+
+undefined
+var email = "president@whitehouse.gov";
+
+undefined
+emailPattern.test(email)
+true
+var myPat = /./
+undefined
+var myStr= "x"
+undefined
+myPat.test(myStr)
+true
+var myStr= "xa"
+undefined
+myPat.test(myStr)
+true
+var myPat = /^.$/
+undefined
+myPat.test(myStr)
+false
+var myPat = /\d/
+undefined
+myPat.test(myStr)
+false
+var myStr= "122"
+undefined
+myPat.test(myStr)
+true
+myPat.exec(myStr)
+["1"]
+var myPat = /\d*/
+undefined
+myPat.exec(myStr)
+["122"]
+var myStr= "122adsad837192837"
+undefined
+myPat.exec(myStr)
+["122"]
+var myStr= "dasDA122adsad837192837"
+undefined
+myPat.exec(myStr)
+[""]
+var myStr= "dasDA 122 adsad837192837"
+undefined
+myPat.exec(myStr)
+[""]
+var myPat = /\d*/igm
+undefined
+myPat.exec(myStr)
+[""]
+var myPat = /(\d)*/igm
+undefined
+myPat.exec(myStr)
+["", undefined]
+myPat.global
+true
+var myPat = /(\d)*/
+undefined
+myPat.global
+false
+myPat
+/(\d)*/
+myPat.source
+"(\d)*"
+var myArr = [1 ,2]
+undefined
+myArr
+[1, 2]
+myArr.concat([3,4])
+[1, 2, 3, 4]
+var a2 = myArr.concat([3,4])
+undefined
+a2.pop()
+4
+a2
+[1, 2, 3]
+a2[a2.length-1]
+3
+a2
+[1, 2, 3]
+a2.(4,5,6)
+VM817:2 Uncaught SyntaxError: Unexpected token ((…)InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+a2.push(4,5,6)
+6
+a2
+[1, 2, 3, 4, 5, 6]
+a2.reverse()
+[6, 5, 4, 3, 2, 1]
+a2
+[6, 5, 4, 3, 2, 1]
+a2.sort()
+[1, 2, 3, 4, 5, 6]
+a2
+[1, 2, 3, 4, 5, 6]
+a2.shift()
+1
+a2
+[2, 3, 4, 5, 6]
+a2.unshift(1)
+6
+a2
+[1, 2, 3, 4, 5, 6]
+a2.unshift(1)
+7
+a2
+[1, 1, 2, 3, 4, 5, 6]
+a2.splice(1)
+[1, 2, 3, 4, 5, 6]
+a2.splice(2)
+[]
+a2
+[1]
+var a2 = [0 ,1, 2, 3, 4, 5]
+undefined
+a2.splice(0,4)
+[0, 1, 2, 3]
+a2
+[4, 5]
+var hospitalDepts = ["Anesthesia", "Molecular Biology","Neurology", "Pediatrics"];
+
+undefined
+hospitalDepts.splice(3, 0, "Ophthalmology");
+
+[]
+hospitalDepts
+["Anesthesia", "Molecular Biology", "Neurology", "Ophthalmology", "Pediatrics"]
+hospitalDepts.join()
+"Anesthesia,Molecular Biology,Neurology,Ophthalmology,Pediatrics"
+hospitalDepts.join("")
+"AnesthesiaMolecular BiologyNeurologyOphthalmologyPediatrics"
+var cs=hospitalDepts.join()
+undefined
+cs
+"Anesthesia,Molecular Biology,Neurology,Ophthalmology,Pediatrics"
+cs.split()
+["Anesthesia,Molecular Biology,Neurology,Ophthalmology,Pediatrics"]
+cs.split(",")
+["Anesthesia", "Molecular Biology", "Neurology", "Ophthalmology", "Pediatrics"]
+var myStObj= JSON.stringify({ x: 5 })
+undefined
+var myObj = JSON.parse(myS
+VM1296:2 Uncaught SyntaxError: missing ) after argument list(…)InjectedScript._evaluateOn @ VM57:878InjectedScript._evaluateAndWrap @ VM57:811InjectedScript.evaluate @ VM57:667
+var myObj = JSON.parse(myStObj)
+undefined
+myObj
+Object {x: 5}
+var person1 = {
+  "fname" : "Ozgur",
+  "lname" : "Ozturk",
+  "phone" : "(888) 888-8888",
+  "address" : {
+      "street" : "123 Broadway St",
+      "city" : "Atlanta",
+      "State" : "GA",
+      "zip" : "30001"
+  }    
+}
+undefined
+var myStPerson = JSON.stringify(person1)
+undefined
+myStPerson
+"{"fname":"Ozgur","lname":"Ozturk","phone":"(888) 888-8888","address":{"street":"123 Broadway St","city":"Atlanta","State":"GA","zip":"30001"}}"
+JSON.parse(myStPerson)
+Object {fname: "Ozgur", lname: "Ozturk", phone: "(888) 888-8888", address: Object}

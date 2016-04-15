@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <button>Show Hide</button>
+    <div>
+        <p class="selected">a1</p>
+        <p>a2</p>
+        <p>a3</p>
+        <p>a4</p>
+    </div>
+    <div>
+        <p>b</p>
+    </div>
+    <script   src="jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    <script>
+        $( "div" ).hide();
+        // jQuery way to attach handler to events 
+        $("button").click(showHide);
+        function showHide(){
+            if ($( "div" ).css("display")==="block")
+                $( "div" ).hide();
+            else
+                $( "div" ).show();
+        }        
+    </script>
+</body>
+</html>
