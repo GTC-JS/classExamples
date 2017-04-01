@@ -30,7 +30,7 @@ function setUpPage() {
 }
 
 function moveDrag(evt){
-    currentPos = getCoords(evt);
+    var currentPos = getCoords(evt);
     var deltaX = currentPos[0] - origin[0]
     var deltaY = currentPos[1] - origin[1]
     this.style.left = (pos[0] + deltaX) + "px";
@@ -43,6 +43,12 @@ function getCoords(evt){
     coords[1] = evt.clientY;
     return coords;
 }
+
+function removeDragListener(){
+    this.removeEventListener("mousemove", moveDrag, false)
+    this.removeEventListener("mouseup", removeDragListener, false)    
+}
+
 function startDrag(evt){
     //set z-index for object currently being moved
     //so it is not covered by any other elements
