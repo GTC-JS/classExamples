@@ -29,6 +29,17 @@ function setUpPage() {
     }
 }
 
+function startDrag(evt){
+    //set z-index for object currently being moved
+    //so it is not covered by any other elements
+    this.style.zIndex = zIndexCounter;
+    zIndexCounter++; //so next moved element will also have largest zIndex
+    this.addEventListener("mousemove", moveDrag, false)
+    this.addEventListener("mouseup", removeDragListener, false)
+    pos = [this.offsetLeft,this.offsetTop];
+    origin = getCoords(evt)
+}
+
 // configure page to display Setup content
 function loadSetup() {
    document.querySelector("nav ul li:first-of-type").className = "current";
