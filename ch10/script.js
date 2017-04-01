@@ -36,6 +36,13 @@ function moveDrag(evt){
     this.style.left = (pos[0] + deltaX) + "px";
     this.style.top = (pos[1] + deltaY) + "px";
 }
+
+function getCoords(evt){
+    var coords = [];
+    coords[0] = evt.clientX;
+    coords[1] = evt.clientY;
+    return coords;
+}
 function startDrag(evt){
     //set z-index for object currently being moved
     //so it is not covered by any other elements
