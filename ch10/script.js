@@ -29,6 +29,13 @@ function setUpPage() {
     }
 }
 
+function moveDrag(evt){
+    currentPos = getCoords(evt);
+    var deltaX = currentPos[0] - origin[0]
+    var deltaY = currentPos[1] - origin[1]
+    this.style.left = (pos[0] + deltaX) + "px";
+    this.style.top = (pos[1] + deltaY) + "px";
+}
 function startDrag(evt){
     //set z-index for object currently being moved
     //so it is not covered by any other elements
