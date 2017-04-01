@@ -10,11 +10,23 @@
 */
 
 "use strict";
+var zIndexCounter;
+var pos = [];
+var origin;
 
 // perform setup tasks when page first loads
 function setUpPage() {
-   document.querySelector("nav ul li:first-of-type").addEventListener("click", loadSetup, false);
-   document.querySelector("nav ul li:last-of-type").addEventListener("click", loadDirections, false);
+    document.querySelector("nav ul li:first-of-type").addEventListener("click", loadSetup, false);
+    document.querySelector("nav ul li:last-of-type").addEventListener("click", loadDirections, false);
+    var movableItems = document.querySelectorAll("#room div");
+    //USED FOR MOVING OBJECTS TO BE AT TOP. 
+    //THIS GETS ASSIGNED TO MOVING OBJECT AS zIndex
+    //since it will be largest zIndex, it will not be covered
+    zIndexCounter = movableItems.length+1;
+    //ADD EVENT LISTENER TO MOUSEDOWN FOR FURNITURES
+    for(var i = 0; i < movableItems.length; i++){
+        movableItems[i].addEventListener("mousedown",startDrag,false);
+    }
 }
 
 // configure page to display Setup content
