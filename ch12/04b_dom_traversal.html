@@ -27,9 +27,11 @@
     <script   src="jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
     <script>
         $(function(){
-            //$(".selected").parent().css( "border", "1px solid gray" );
+            $(".selected").css( "background", "yellow" );
+
+            $(".selected").parent().css( "border", "1px solid gray" );
             //try
-            $(".selected").siblings().css( "border", "1px solid gray" );
+            //$(".selected").siblings().css( "background", "red" );
         });        
     </script>
 </body>
