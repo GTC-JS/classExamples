@@ -5,7 +5,7 @@
     <title>DOM Manipulation</title>
 </head>
 <body>
-    <button>Show Hide</button>
+    <button id="showHideButton">Show Hide</button>
     <div>
         <p class="selected">a1</p>
         <p>a2</p>
@@ -19,7 +19,10 @@
     <script>
         $( "div" ).hide();
         // jQuery way to attach handler to events 
-        $("button").click(showHide);
+        $("#showHideButton").click(showHide);
+        //DEMO: if this function is in a different script element
+        //DEMO: if defined as:
+        //showHide = function(){
         function showHide(){
             if ($( "div" ).css("display")==="block")
                 $( "div" ).hide();
